@@ -11,13 +11,16 @@
     text-align: center;
     letter-spacing: 0.03em;
   }
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .business-list {
   @extend %ul-reset;
   display: flex;
 
-  .item {
+  .business-item {
     position: relative;
 
     &:not(:first-child) {
