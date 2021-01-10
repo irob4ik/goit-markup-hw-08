@@ -8,24 +8,35 @@
   color: $alternative-white-text;
 
   text-align: center;
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
 
   .container {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
   }
-  h1 {
+  .studio-heading {
     margin-top: 0px;
     margin-bottom: 30px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
-  .link {
+  .hero-link {
     display: inline-block;
     padding: 10px 32px;
 
