@@ -47,6 +47,8 @@
   top: 100%;
   left: 0;
   width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   background-color: $primary-bgc;
   text-align: center;
@@ -57,17 +59,17 @@
 
 .nav-list {
   @extend %ul-reset;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .nav-item {
-  // text-align: center;
+  &:not(:first-child) {
+    margin-top: 40px;
+  }
 }
 
 .header-link {
   position: relative;
-  display: block;
+  display: inline-block;
   padding-top: 8px;
   padding-bottom: 8px;
 
@@ -109,19 +111,21 @@
 .address-list {
   @extend %ul-reset;
 
-  display: flex;
-  align-items: center;
-
-  margin-left: auto;
+  .address-item:not(:first-child) {
+    margin-top: 16px;
+  }
 
   .icon {
     margin-right: 10px;
     fill: currentColor;
   }
-  .address-item:last-child {
-    margin-left: 50px;
-  }
+
   .reach {
     color: $alternative-text-color;
+
+    &:hover,
+    &:focus {
+      color: $hover-focus-text-color;
+    }
   }
 }

@@ -118,20 +118,21 @@ body {
   top: 100%;
   left: 0;
   width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #ffffff;
   text-align: center;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
 
-.nav-list {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.nav-item:not(:first-child) {
+  margin-top: 40px;
 }
 
 .header-link {
   position: relative;
-  display: block;
+  display: inline-block;
   padding-top: 8px;
   padding-bottom: 8px;
   font-style: normal;
@@ -162,24 +163,18 @@ body {
   background-color: #2196f3;
 }
 
-.address-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
+.address-list .address-item:not(:first-child) {
+  margin-top: 16px;
 }
 .address-list .icon {
   margin-right: 10px;
   fill: currentColor;
 }
-.address-list .address-item:last-child {
-  margin-left: 50px;
-}
 .address-list .reach {
   color: #757575;
+}
+.address-list .reach:hover, .address-list .reach:focus {
+  color: #2196f3;
 }
 
 /* company logo */
