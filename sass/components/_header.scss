@@ -1,56 +1,93 @@
 /* header */
 
 .header-def {
-  .container {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ececec;
-  }
-  .link {
-    display: flex;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    text-decoration: none;
-    color: $primary-text-color;
-
-    transition: color 250ms $timing-function;
-
-    &:hover,
-    &:focus {
-      color: $hover-focus-text-color;
-    }
-  }
-  .item {
-    position: relative;
-  }
+  border-bottom: 1px solid #ececec;
+  position: relative;
 }
 
 .page-nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 
-  .nav-list {
-    @extend %ul-reset;
+  min-height: 60px;
+}
 
-    display: flex;
-    margin-left: 93px;
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: transparent;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  transition: fill 250ms $timing-function;
+
+  &:hover {
+    fill: $hover-focus-text-color;
   }
 
-  .item:not(:first-child) {
-    margin-left: 50px;
+  .icon-close {
+    display: none;
   }
 
-  .studio,
-  .portfolio,
-  .contacts {
+  &.is-open .icon-close {
+    display: block;
+  }
+  &.is-open .icon-menu {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  z-index: 999;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  background-color: $primary-bgc;
+  text-align: center;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+.nav-list {
+  @extend %ul-reset;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.nav-item {
+  // text-align: center;
+}
+
+.header-link {
+  position: relative;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+  color: $primary-text-color;
+
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $hover-focus-text-color;
+  }
+
+  &.current {
     color: $hover-focus-text-color;
 
     &::after {
@@ -69,21 +106,19 @@
   }
 }
 
-.page-address {
+.address-list {
+  @extend %ul-reset;
+
+  display: flex;
+  align-items: center;
+
   margin-left: auto;
-
-  .address-list {
-    @extend %ul-reset;
-
-    display: flex;
-    align-items: center;
-  }
 
   .icon {
     margin-right: 10px;
     fill: currentColor;
   }
-  .item:last-child {
+  .address-item:last-child {
     margin-left: 50px;
   }
   .reach {

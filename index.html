@@ -16,32 +16,48 @@
         <div class="container">
             <nav class="page-nav">
                 <a href="./index.html" class="logo"><span class="logo-blue">Web</span>Studio</a>
-                <ul class="nav-list">
-                    <li class="item"><a href="./index.html" class="studio link">Студия</a></li>
-                    <li class="item"><a href="./portfolio.html" class="link">Портфолио</a> </li>
-                    <li class="item"><a href="#" class="link">Контакты</a></li>
-                </ul>
+                <button type="button" class="menu-button" aria-expanded="false" data-menu-button>
+                    <svg 
+                        width="40" 
+                        height="40" 
+                        aria-label="Переключатель мобильного меню"
+                    >
+                        <use class="icon-close" href="./images/icons/sprite.svg#icon-close-header"></use>
+                        <use class="icon-menu" href="./images/icons/sprite.svg#icon-menu-burger"></use>                        
+                    </svg>                
+                </button>
+                <div class="mobile-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="./index.html" class="current header-link">Студия</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./portfolio.html" class="header-link">Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="header-link">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="address-list">
+                        <li class="address-item">
+                            <a href="mailto:info@devstudio.com" class="reach header-link">
+                                <svg class="icon" width="16" height="12">
+                                    <use href="./images/icons/sprite.svg#icon-envelope"></use>
+                                </svg>
+                                <span>info@devstudio.com</span>
+                            </a>
+                        </li>
+                        <li class="address-item">
+                            <a href="tel:+380961111111" class="reach header-link">
+                                <svg class="icon" width="10" height="16">
+                                    <use href="./images/icons/sprite.svg#icon-smartphone"></use>
+                                </svg>
+                                <span>+38 096 111 11 11</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>                
             </nav>
-            <address class="page-address">
-                <ul class="address-list">
-                    <li class="item">
-                        <a href="mailto:info@devstudio.com" class="reach link">
-                            <svg class="icon" width="16" height="12">
-                                <use href="./images/icons/sprite.svg#icon-envelope"></use>
-                            </svg>
-                            <span>info@devstudio.com</span>                          
-                        </a>                                
-                    </li>
-                    <li class="item">                        
-                        <a href="tel:+380961111111" class="reach link">
-                            <svg class="icon" width="10" height="16">
-                                <use href="./images/icons/sprite.svg#icon-smartphone"></use>
-                            </svg>
-                            <span>+38 096 111 11 11</span>        
-                        </a>
-                    </li>
-                </ul>
-            </address>
         </div>        
     </header>
     <main class="studio">
@@ -434,5 +450,7 @@
         </div>        
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/check.js"></script>
+    <script src="./js/header_menu.js"></script>
 </body>
 </html>

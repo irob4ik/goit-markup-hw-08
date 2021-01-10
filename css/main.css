@@ -25,7 +25,7 @@ img {
   overflow: hidden;
 }
 
-.portfolio-list, .buttons, .clients-list, .team-link, .team-list, .business-list, .qualities-list, .form .form-list, .footer-section-2 .foot-link, .page-address .address-list, .page-nav .nav-list {
+.portfolio-list, .buttons, .clients-list, .team-link, .team-list, .business-list, .qualities-list, .form .form-list, .footer-section-2 .foot-link, .address-list, .nav-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -68,38 +68,8 @@ body {
 }
 
 /* header */
-.header-def .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.header-def {
   border-bottom: 1px solid #ececec;
-}
-.header-def .link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: #212121;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header-def .link:hover, .header-def .link:focus {
-  color: #2196f3;
-}
-.header-def .item {
   position: relative;
 }
 
@@ -107,27 +77,80 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 60px;
 }
-.page-nav .nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 93px;
+
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.page-nav .item:not(:first-child) {
-  margin-left: 50px;
+.menu-button:hover {
+  fill: #2196f3;
 }
-.page-nav .studio,
-.page-nav .portfolio,
-.page-nav .contacts {
+.menu-button .icon-close {
+  display: none;
+}
+.menu-button.is-open .icon-close {
+  display: block;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.mobile-menu {
+  position: absolute;
+  z-index: 999;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  text-align: center;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+.nav-list {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.header-link {
+  position: relative;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #212121;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-link:hover, .header-link:focus {
   color: #2196f3;
 }
-.page-nav .studio::after,
-.page-nav .portfolio::after,
-.page-nav .contacts::after {
+.header-link.current {
+  color: #2196f3;
+}
+.header-link.current::after {
   content: "";
   display: block;
   position: absolute;
@@ -139,25 +162,23 @@ body {
   background-color: #2196f3;
 }
 
-.page-address {
-  margin-left: auto;
-}
-.page-address .address-list {
+.address-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: auto;
 }
-.page-address .icon {
+.address-list .icon {
   margin-right: 10px;
   fill: currentColor;
 }
-.page-address .item:last-child {
+.address-list .address-item:last-child {
   margin-left: 50px;
 }
-.page-address .reach {
+.address-list .reach {
   color: #757575;
 }
 
