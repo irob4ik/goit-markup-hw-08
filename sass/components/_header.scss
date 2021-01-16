@@ -2,15 +2,29 @@
 
 .header-def {
   border-bottom: 1px solid #ececec;
-  position: relative;
-}
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  background-color: $primary-bgc;
+  width: 100%;
 
-.page-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @media screen and (min-width: 768px) {
+    position: static;
+  }
 
-  min-height: 60px;
+  .page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 60px;
+
+    @media screen and (min-width: 768px) {
+      justify-content: flex-start;
+
+      min-height: 80px;
+    }
+  }
 }
 
 .menu-button {
@@ -24,6 +38,10 @@
   cursor: pointer;
 
   transition: fill 250ms $timing-function;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 
   &:hover {
     fill: $hover-focus-text-color;
@@ -41,37 +59,71 @@
   }
 }
 
-.mobile-menu {
-  position: absolute;
-  z-index: 999;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding-top: 60px;
-  padding-bottom: 60px;
+.nav-menu {
+  @media screen and (max-width: 767px) {
+    opacity: 0;
+    pointer-events: none;
 
-  background-color: $primary-bgc;
-  text-align: center;
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-    0px 1px 3px rgba(0, 0, 0, 0.16);
+    background-color: $primary-bgc;
+    text-align: center;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 250ms $timing-function;
+
+    &.is-open {
+      opacity: 1;
+      pointer-events: auto;
+
+      transform: scaley(1);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .nav-list {
   @extend %ul-reset;
-}
 
-.nav-item {
-  &:not(:first-child) {
-    margin-top: 40px;
+  @media screen and (max-width: 767px) {
+    .nav-item:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    .nav-item:not(:first-child) {
+      margin-left: 50px;
+    }
   }
 }
 
 .header-link {
   position: relative;
   display: inline-block;
-  padding-top: 8px;
-  padding-bottom: 8px;
 
   font-style: normal;
   font-weight: 500;
@@ -84,6 +136,34 @@
 
   transition: color 250ms $timing-function;
 
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
+  &.reach {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $alternative-text-color;
+
+    @media screen and (min-width: 768px) {
+      justify-content: left;
+      font-size: 12px;
+      line-height: 1.17;
+
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
+  }
+
   &:hover,
   &:focus {
     color: $hover-focus-text-color;
@@ -91,6 +171,11 @@
 
   &.current {
     color: $hover-focus-text-color;
+    padding-bottom: 12px;
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 32px;
+    }
 
     &::after {
       content: '';
@@ -110,22 +195,39 @@
 
 .address-list {
   @extend %ul-reset;
+  margin-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 21px;
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    display: flex;
+  }
 
   .address-item:not(:first-child) {
     margin-top: 16px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 0px;
+      margin-left: 30px;
+    }
   }
 
-  .icon {
-    margin-right: 10px;
+  .address-icon {
+    display: block;
+    margin-right: 8px;
+
     fill: currentColor;
-  }
 
-  .reach {
-    color: $alternative-text-color;
-
-    &:hover,
-    &:focus {
-      color: $hover-focus-text-color;
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
     }
   }
 }

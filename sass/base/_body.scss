@@ -5,4 +5,8 @@ body {
   font-family: $main-font;
   font-weight: 400;
   letter-spacing: 0.03em;
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
