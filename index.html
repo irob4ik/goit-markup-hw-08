@@ -172,19 +172,43 @@
                 <h2 class="business-header">Чем мы занимаемся</h2>
                 <ul class="business-list">
                     <li class="business-item">
-                        <img src="./images/img1.jpg" alt="Десктоп решения">
+                        <img 
+                        srcset="
+                        ./images/img_desk/we_do1.jpg 1x,
+                        ./images/img_desk/we_do1@2x.jpg 2x
+                        "
+                        src="./images/img_desk/we_do1.jpg" 
+                        alt="Десктоп решения"
+                        width="370"
+                        >
                         <div class="label">
                             <h3 class="label-text">Десктопные приложения</h3>
                         </div>
                     </li>
                     <li class="business-item">
-                        <img src="./images/img2.jpg" alt="Мобильные решения">
+                        <img
+                         srcset="
+                        ./images/img_desk/we_do2.jpg 1x,
+                        ./images/img_desk/we_do2@2x.jpg 2x
+                        "
+                        src="./images/img_desk/we_do2.jpg" 
+                        alt="Десктоп решения"
+                        width="370"
+                        >
                         <div class="label">
                             <h3 class="label-text">Мобильные приложения</h3>
                         </div>
                     </li>
                     <li class="business-item">
-                        <img src="./images/img3.jpg" alt="Дизайн">
+                        <img
+                        srcset="
+                        ./images/img_desk/we_do3.jpg 1x,
+                        ./images/img_desk/we_do3@2x.jpg 2x
+                        "
+                        src="./images/img_desk/we_do3.jpg" 
+                        alt="Десктоп решения"
+                        width="370"
+                        >
                         <div class="label">
                             <h3 class="label-text">Дизайнерские приложения</h3>
                         </div>
@@ -198,7 +222,25 @@
                 <h2 class="team-header">Наша команда</h2>
                 <ul class="team-list">
                     <li class="team-member">
-                        <img class="member-photo" src="./images/t1.jpg" alt="Игорь Демьяненко">
+                        <img 
+                        class="member-photo"
+                        srcset="
+                        ./images/img_mob/t_member_1m.jpg    450w,
+                        ./images/img_mob/t_member_1m@2x.jpg 900w,
+                        ./images/img_tab/t_member_1t.jpg    354w,
+                        ./images/img_tab/t_member_1t@2x.jpg 708w,
+                        ./images/img_desk/t_member_1d.jpg   270w,
+                        ./images/img_desk/t_member_1d@2x.jpg 540w
+                        " 
+                        src="./images/img_desk/t_member_1d.jpg" 
+                        alt="Игорь Демьяненко"
+                        sizes="
+                        (max-width: 767px) 450px,
+                        (max-width: 1199px) 354px,
+                        (min-width: 1200px) 270px,
+                        100vw
+                        "
+                        >
                         <div class="member-thumb">
                             <h3 class="member-name">Игорь Демьяненко</h3>
                             <p class="member-position">Product Designer</p>                        
