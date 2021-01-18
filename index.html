@@ -172,43 +172,46 @@
                 <h2 class="business-header">Чем мы занимаемся</h2>
                 <ul class="business-list">
                     <li class="business-item">
-                        <img 
-                        srcset="
-                        ./images/img_desk/we_do1.jpg 1x,
-                        ./images/img_desk/we_do1@2x.jpg 2x
-                        "
-                        src="./images/img_desk/we_do1.jpg" 
-                        alt="Десктоп решения"
-                        width="370"
-                        >
+                        <picture>              
+                            <source type="image/webp"
+                                srcset="./images/img_desk/we_do1.webp 1x, 
+                                ./images/img_desk/we_do1@2x.webp 2x"
+                                media="(min-width: 1200px)">
+                            <source
+                                srcset="./images/img_desk/we_do1.jpg 1x, 
+                                ./images/img_desk/we_do1@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                        
+                            <img class="member-photo" src="./images/img_desk/we_do1.jpg" alt="Десктопные приложения">
+                        </picture>
                         <div class="label">
                             <h3 class="label-text">Десктопные приложения</h3>
                         </div>
                     </li>
                     <li class="business-item">
-                        <img
-                         srcset="
-                        ./images/img_desk/we_do2.jpg 1x,
-                        ./images/img_desk/we_do2@2x.jpg 2x
-                        "
-                        src="./images/img_desk/we_do2.jpg" 
-                        alt="Десктоп решения"
-                        width="370"
-                        >
+                        <picture>
+                            <source type="image/webp" srcset="./images/img_desk/we_do2.webp 1x, 
+                                                        ./images/img_desk/we_do2@2x.webp 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/img_desk/we_do2.jpg 1x, 
+                                                        ./images/img_desk/we_do2@2x.jpg 2x" media="(min-width: 1200px)">
+                        
+                            <img class="member-photo" src="./images/img_desk/we_do2.jpg" alt="Мобильные приложения">
+                        </picture>
                         <div class="label">
                             <h3 class="label-text">Мобильные приложения</h3>
                         </div>
                     </li>
                     <li class="business-item">
-                        <img
-                        srcset="
-                        ./images/img_desk/we_do3.jpg 1x,
-                        ./images/img_desk/we_do3@2x.jpg 2x
-                        "
-                        src="./images/img_desk/we_do3.jpg" 
-                        alt="Десктоп решения"
-                        width="370"
-                        >
+                        <picture>
+                            <source type="image/webp" srcset="./images/img_desk/we_do3.webp 1x, 
+                                ./images/img_desk/we_do3@2x.webp 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/img_desk/we_do3.jpg 1x, 
+                                ./images/img_desk/we_do3@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                        
+                            <img class="member-photo" src="./images/img_desk/we_do3.jpg" alt="Дизайнерские приложения">
+                        </picture>
                         <div class="label">
                             <h3 class="label-text">Дизайнерские приложения</h3>
                         </div>
@@ -222,25 +225,42 @@
                 <h2 class="team-header">Наша команда</h2>
                 <ul class="team-list">
                     <li class="team-member">
-                        <img 
-                        class="member-photo"
-                        srcset="
-                        ./images/img_mob/t_member_1m.jpg    450w,
-                        ./images/img_mob/t_member_1m@2x.jpg 900w,
-                        ./images/img_tab/t_member_1t.jpg    354w,
-                        ./images/img_tab/t_member_1t@2x.jpg 708w,
-                        ./images/img_desk/t_member_1d.jpg   270w,
-                        ./images/img_desk/t_member_1d@2x.jpg 540w
-                        " 
-                        src="./images/img_desk/t_member_1d.jpg" 
-                        alt="Игорь Демьяненко"
-                        sizes="
-                        (max-width: 767px) 450px,
-                        (max-width: 1199px) 354px,
-                        (min-width: 1200px) 270px,
-                        100vw
-                        "
-                        >
+                        <picture>
+                            <source 
+                                type="image/webp" 
+                                srcset="./images/img_mob/t_member_1m.webp 1x, 
+                                ./images/img_mob/t_member_1m@2x.webp 2x"
+                                media="(max-width: 767px)">
+                            <source 
+                                srcset="./images/img_mob/t_member_1m.jpg 1x, 
+                                ./images/img_mob/t_member_1m@2x.jpg 2x" 
+                                media="(max-width: 767px)">
+
+                            <source 
+                                type="image/webp" 
+                                srcset="./images/img_tab/t_member_1t.webp 1x, 
+                                ./images/img_tab/t_member_1t@2x.webp 2x" 
+                                media="(max-width: 1199px)">
+                            <source 
+                                srcset="./images/img_tab/t_member_1t.jpg 1x, 
+                                ./images/img_tab/t_member_1t@2x.jpg 2x" 
+                                media="(max-width: 1199px)">   
+                                
+                            <source 
+                                type="image/webp" 
+                                srcset="./images/img_desk/t_member_1d.webp 1x, 
+                                ./images/img_desk/t_member_1d@2x.webp 2x" 
+                                media="(min-width: 1200px)">
+                            <source 
+                                srcset="./images/img_desk/t_member_1d.jpg 1x, 
+                                ./images/img_desk/t_member_1d@2x.jpg 2x" 
+                                media="(min-width: 1200px)">                              
+
+                            <img 
+                                class="member-photo" 
+                                src="./images/img_desk/t_member_1d.jpg" 
+                                alt="Игорь Демьяненко">
+                        </picture>
                         <div class="member-thumb">
                             <h3 class="member-name">Игорь Демьяненко</h3>
                             <p class="member-position">Product Designer</p>                        
@@ -277,7 +297,30 @@
                         </div>                       
                     </li>
                     <li class="team-member">
-                        <img class="member-photo" src="./images/t2.jpg" alt="Ольга Репина">
+                        <picture>
+                            <source type="image/webp" srcset="./images/img_mob/t_member_2m.webp 1x, 
+                                ./images/img_mob/t_member_2m@2x.webp 2x"
+                                media="(max-width: 767px)">
+                            <source srcset="./images/img_mob/t_member_2m.jpg 1x, 
+                                ./images/img_mob/t_member_2m@2x.jpg 2x"
+                                media="(max-width: 767px)">
+                        
+                            <source type="image/webp" srcset="./images/img_tab/t_member_2t.webp 1x, 
+                                ./images/img_tab/t_member_2t@2x.webp 2x"
+                                media="(max-width: 1199px)">
+                            <source srcset="./images/img_tab/t_member_2t.jpg 1x, 
+                                ./images/img_tab/t_member_2t@2x.jpg 2x"
+                                media="(max-width: 1199px)">
+                        
+                            <source type="image/webp" srcset="./images/img_desk/t_member_2d.webp 1x, 
+                                ./images/img_desk/t_member_2d@2x.webp 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/img_desk/t_member_2d.jpg 1x, 
+                                ./images/img_desk/t_member_2d@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                        
+                            <img class="member-photo" src="./images/img_desk/t_member_2d.jpg" alt="Ольга Репина">
+                        </picture>
                         <div class="member-thumb">
                             <h3 class="member-name">Ольга Репина</h3>
                             <p class="member-position">Frontend Developer</p>                        
@@ -314,7 +357,24 @@
                         </div>
                     </li>
                     <li class="team-member">
-                        <img class="member-photo" src="./images/t3.jpg" alt="Николай Тарасов">
+                        <picture>
+                            <source type="image/webp" srcset="./images/img_mob/t_member_3m.webp 1x, 
+                                                        ./images/img_mob/t_member_3m@2x.webp 2x" media="(max-width: 767px)">
+                            <source srcset="./images/img_mob/t_member_3m.jpg 1x, 
+                                                        ./images/img_mob/t_member_3m@2x.jpg 2x" media="(max-width: 767px)">
+                        
+                            <source type="image/webp" srcset="./images/img_tab/t_member_3t.webp 1x, 
+                                                        ./images/img_tab/t_member_3t@2x.webp 2x" media="(max-width: 1199px)">
+                            <source srcset="./images/img_tab/t_member_3t.jpg 1x, 
+                                                        ./images/img_tab/t_member_3t@2x.jpg 2x" media="(max-width: 1199px)">
+                        
+                            <source type="image/webp" srcset="./images/img_desk/t_member_3d.webp 1x, 
+                                                        ./images/img_desk/t_member_3d@2x.webp 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/img_desk/t_member_3d.jpg 1x, 
+                                                        ./images/img_desk/t_member_3d@2x.jpg 2x" media="(min-width: 1200px)">
+                        
+                            <img class="member-photo" src="./images/img_desk/t_member_3d.jpg" alt="Николай Тарасов">
+                        </picture>
                         <div class="member-thumb">
                             <h3 class="member-name">Николай Тарасов</h3>
                             <p class="member-position">Marketing</p>                       
@@ -351,7 +411,30 @@
                         </div>
                     </li>
                     <li class="team-member">
-                        <img class="member-photo" src="./images/t4.jpg" alt="Михаил Ермаков">
+                        <picture>
+                            <source type="image/webp" srcset="./images/img_mob/t_member_4m.webp 1x, 
+                                                                                ./images/img_mob/t_member_4m@2x.webp 2x"
+                                media="(max-width: 767px)">
+                            <source srcset="./images/img_mob/t_member_4m.jpg 1x, 
+                                                                                ./images/img_mob/t_member_4m@2x.jpg 2x"
+                                media="(max-width: 767px)">
+                        
+                            <source type="image/webp" srcset="./images/img_tab/t_member_4t.webp 1x, 
+                                                                                ./images/img_tab/t_member_4t@2x.webp 2x"
+                                media="(max-width: 1199px)">
+                            <source srcset="./images/img_tab/t_member_4t.jpg 1x, 
+                                                                                ./images/img_tab/t_member_4t@2x.jpg 2x"
+                                media="(max-width: 1199px)">
+                        
+                            <source type="image/webp" srcset="./images/img_desk/t_member_4d.webp 1x, 
+                                                                                ./images/img_desk/t_member_4d@2x.webp 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/img_desk/t_member_4d.jpg 1x, 
+                                                                                ./images/img_desk/t_member_4d@2x.jpg 2x"
+                                media="(min-width: 1200px)">
+                        
+                            <img class="member-photo" src="./images/img_desk/t_member_4d.jpg" alt="Михаил Ермаков">
+                        </picture>
                         <div class="member-thumb">
                             <h3 class="member-name">Михаил Ермаков</h3>
                             <p class="member-position">UI Designer</p>                        
