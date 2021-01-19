@@ -584,8 +584,8 @@ footer .container {
 .studio-hero {
   position: relative;
   background-color: #c4c4c4;
-  background-image: -webkit-gradient(linear, left top, right top, from(#2f303a66), to(#2f303a66)), url(../images/backgrnd.jpg);
-  background-image: linear-gradient(to right, #2f303a66, #2f303a66), url(../images/backgrnd.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(#2f303a66), to(#2f303a66)), url(../images/img_mob/Header_m.jpg);
+  background-image: linear-gradient(to right, #2f303a66, #2f303a66), url(../images/img_mob/Header_m.jpg);
   background-size: cover;
   color: #ffffff;
   text-align: center;
@@ -594,9 +594,35 @@ footer .container {
   margin-right: auto;
   margin-left: auto;
 }
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .studio-hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(#2f303a66), to(#2f303a66)), url(../images/img_mob/Header_m@2x.jpg);
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66), url(../images/img_mob/Header_m@2x.jpg);
+  }
+}
 @media screen and (min-width: 768px) {
   .studio-hero {
     margin-top: 0px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#2f303a66), to(#2f303a66)), url(../images/img_tab/Header_t.jpg);
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66), url(../images/img_tab/Header_t.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .studio-hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(#2f303a66), to(#2f303a66)), url(../images/img_tab/Header_t@2x.jpg);
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66), url(../images/img_tab/Header_t@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .studio-hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(#2f303a66), to(#2f303a66)), url(../images/img_desk/Header_d.jpg);
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66), url(../images/img_desk/Header_d.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .studio-hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(#2f303a66), to(#2f303a66)), url(../images/img_desk/Header_d@2x.jpg);
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66), url(../images/img_desk/Header_d@2x.jpg);
   }
 }
 .studio-hero .container {
@@ -667,8 +693,6 @@ footer .container {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1, 1);
           transform: translate(-50%, -50%) scale(1, 1);
-  min-width: 450px;
-  min-height: 609px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -678,10 +702,16 @@ footer .container {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
-    min-width: 528px;
-    min-height: 581px;
+    width: 528px;
+    height: 581px;
   }
 }
 .modal .close-modal {
@@ -1275,7 +1305,7 @@ footer .container {
           justify-content: left;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  height: 131px;
+  min-height: 131px;
   padding-bottom: 33px;
   margin: -4px;
 }
@@ -1287,7 +1317,7 @@ footer .container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: auto;
+    min-height: auto;
     padding-bottom: 30px;
   }
 }
@@ -1372,6 +1402,14 @@ footer .container {
   -webkit-transform: translatey(0);
           transform: translatey(0);
 }
+.portfolio-list .link .card-pic {
+  max-height: 294px;
+}
+@media screen and (min-width: 480px) {
+  .portfolio-list .link .card-pic {
+    height: 294px;
+  }
+}
 .portfolio-list .description-thumb {
   position: absolute;
   top: 0;
@@ -1412,7 +1450,7 @@ footer .container {
   }
 }
 .portfolio-list .border {
-  padding: 20px 24px;
+  padding: 20px 18px;
   background: #ffffff;
   border: 1px solid #eeeeee;
   border-top: none;
@@ -1434,5 +1472,4 @@ footer .container {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

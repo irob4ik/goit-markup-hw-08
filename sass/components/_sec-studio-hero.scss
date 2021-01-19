@@ -2,7 +2,7 @@
   position: relative;
   background-color: #c4c4c4;
   background-image: linear-gradient(to right, #2f303a66, #2f303a66),
-    url(../images/backgrnd.jpg);
+    url(../images/img_mob/Header_m.jpg);
   background-size: cover;
 
   color: $alternative-white-text;
@@ -13,8 +13,37 @@
   margin-right: auto;
   margin-left: auto;
 
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url(../images/img_mob/Header_m@2x.jpg);
+  }
+
   @media screen and (min-width: 768px) {
     margin-top: 0px;
+
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url(../images/img_tab/Header_t.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+        url(../images/img_tab/Header_t@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+      url(../images/img_desk/Header_d.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, #2f303a66, #2f303a66),
+        url(../images/img_desk/Header_d@2x.jpg);
+    }
   }
 
   .container {
