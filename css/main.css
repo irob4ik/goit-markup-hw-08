@@ -1,3 +1,15 @@
+.portfolio-list, .buttons, .clients-list, .team-link, .team-list, .business-list, .qualities-list, .form .form-list, .footer-section-2 .foot-link, .address-list, .nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-list .form-textarea:focus-within, .form-list .form-input:focus-within, .form-list .form-item:focus-within {
+  border-color: #2196f3;
+  outline: transparent;
+  fill: #2196f3;
+}
+
 *,
 *::before,
 *::after {
@@ -23,18 +35,6 @@ img {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.portfolio-list, .buttons, .clients-list, .team-link, .team-list, .business-list, .qualities-list, .form .form-list, .footer-section-2 .foot-link, .address-list, .nav-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.form-list .form-textarea:focus-within, .form-list .form-input:focus-within, .form-list .form-item:focus-within {
-  border-color: #2196f3;
-  outline: transparent;
-  fill: #2196f3;
 }
 
 .container {
